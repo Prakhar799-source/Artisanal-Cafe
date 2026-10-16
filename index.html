@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Botanica | Specialty Micro-Roastery & Artisanal Pâtisserie</title>
+  <meta name="description" content="A modern botanical cafe and specialty roastery serving slow-crafted single-origin coffees, French sourdough viennoiserie, and seasonal kitchen fare in Greenpoint, Brooklyn.">
+  <meta name="theme-color" content="#241711">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231f140e'/><path d='M35 65 C35 45, 65 45, 65 25 C65 45, 35 45, 35 65 Z' fill='%2362886f'/><circle cx='50' cy='50' r='10' fill='%23dfa458'/></svg>">
+
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Atelier Botanica Home">
+        <div class="brand-symbol">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a9 9 0 0 1 9 9c0 4.97-4.03 9-9 9A9 9 0 0 1 3 11a9 9 0 0 1 9-9Z"/>
+            <path d="M12 6c-3.31 0-6 2.69-6 6 0 2.5 1.5 4.5 3.5 5.5"/>
+            <path d="M12 2v20"/>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-name">Atelier Botanica</span>
+          <span class="brand-tagline">Micro-Roastery & Bakery</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#craft" class="nav-link">Our Craft</a>
+        <a href="#menu" class="nav-link">Seasonal Menu</a>
+        <a href="#hours" class="nav-link">Hours & Rituals</a>
+        <a href="#location" class="nav-link">Location & Map</a>
+        <a href="#reservations" class="nav-link">Reservations</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Live Status Pulse -->
+        <a href="#hours" class="live-status-pill" id="navStatusPill" title="View cafe hours">
+          <span class="status-dot open"></span>
+          <span class="status-text">Open Today</span>
+        </a>
+
+        <!-- Reserve CTA Button -->
+        <a href="#reservations" class="btn btn-primary btn-sm">
+          <span>Book a Table</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+
+        <!-- Mobile Drawer Hamburger Toggle -->
+        <button type="button" class="mobile-toggle" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Sidebar -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="brand-text-wrap">
+        <span class="brand-name" style="font-size: 1.3rem;">Atelier Botanica</span>
+        <span class="brand-tagline">Greenpoint • Brooklyn</span>
+      </div>
+      <button type="button" class="modal-close-btn close-drawer-btn" aria-label="Close menu">&times;</button>
+    </div>
+
+    <ul class="mobile-nav-list">
+      <li><a href="#hero" class="mobile-nav-link"><span>Home</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+      <li><a href="#craft" class="mobile-nav-link"><span>Our Craft</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+      <li><a href="#menu" class="mobile-nav-link"><span>Seasonal Menu</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+      <li><a href="#hours" class="mobile-nav-link"><span>Hours & Rituals</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+      <li><a href="#location" class="mobile-nav-link"><span>Location & Map</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+      <li><a href="#reservations" class="mobile-nav-link"><span>Table Reservation</span> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--border-light);">
+      <p style="font-size: 0.8125rem; color: var(--text-muted); margin-bottom: 1rem;">
+        <strong>Address:</strong> 148 Franklin St, Brooklyn, NY<br>
+        <strong>Mon–Fri:</strong> 7am – 6pm | <strong>Sat–Sun:</strong> 7:30am – 7pm
+      </p>
+      <a href="#reservations" class="btn btn-sage" style="width: 100%;">Reserve a Table</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Hero Text Content -->
+        <div class="hero-content">
+          <div class="eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="5"/></svg>
+            <span>Specialty Micro-Roastery & Pâtisserie</span>
+          </div>
+
+          <h1 class="hero-title">
+            Where wild botanicals meet <em>exceptional roasts.</em>
+          </h1>
+
+          <p class="hero-lead">
+            Slow-crafted single-origin coffees, 72-hour naturally leavened morning viennoiserie, and wholesome seasonal fare, nestled in a sun-drenched greenhouse haven in Greenpoint.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#menu" class="btn btn-primary">
+              <span>Explore The Menu</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="#reservations" class="btn btn-outline">
+              <span>Reserve a Table</span>
+            </a>
+          </div>
+
+          <!-- Feature Highlights Row -->
+          <div class="hero-features">
+            <div class="hero-feat-item">
+              <div class="feat-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m4.93 19.07 4.24-4.24"/></svg>
+              </div>
+              <div>
+                <div class="feat-text-title">94+ SCA Score</div>
+                <div class="feat-text-desc">Direct-trade micro-lots</div>
+              </div>
+            </div>
+
+            <div class="hero-feat-item">
+              <div class="feat-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <div>
+                <div class="feat-text-title">72-Hr Proofing</div>
+                <div class="feat-text-desc">Normandy butter lamination</div>
+              </div>
+            </div>
+
+            <div class="hero-feat-item">
+              <div class="feat-icon-wrap">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="feat-text-title">Botanical Atrium</div>
+                <div class="feat-text-desc">Heated courtyard & greenhouse</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-media-wrap">
+          <div class="hero-image-card">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85" alt="Barista pouring artisanal latte in green ceramic mug" />
+          </div>
+
+          <!-- Top-Left Floating Badge: Steam & Roast -->
+          <div class="hero-float-badge badge-top-left">
+            <div class="badge-icon-steam">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path class="steam-path" d="M8 8c0-2 1-3 1-5"/>
+                <path class="steam-path" d="M12 8c0-2 1-3 1-5"/>
+                <path class="steam-path" d="M16 8c0-2 1-3 1-5"/>
+                <path d="M4 11h16v6a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4v-6Z"/>
+                <path d="M16 13h2a2 2 0 0 1 2 2v0a2 2 0 0 1-2 2h-2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="badge-info-title">Roasted In-House</div>
+              <div class="badge-info-subtitle">Fresh batch dispatched today</div>
+            </div>
+          </div>
+
+          <!-- Bottom-Right Floating Badge: Accolade -->
+          <div class="hero-float-badge badge-bottom-right">
+            <div>
+              <div class="badge-rating-stars">★★★★★</div>
+              <div class="badge-info-title">5.0 Star Guest Rating</div>
+              <div class="badge-info-subtitle">Sprudge & Eater Awardee</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OUR CRAFT & PHILOSOPHY
+         ========================================================================== -->
+    <section class="craft-section" id="craft">
+      <div class="container craft-grid">
+        <!-- Visual Mosaic -->
+        <div class="craft-mosaic">
+          <div class="mosaic-img mosaic-img-1">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80" alt="Freshly roasted specialty coffee beans" />
+          </div>
+          <div class="mosaic-img mosaic-img-2">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Freshly baked flaky artisanal croissants" />
+          </div>
+          <div class="mosaic-img mosaic-img-3">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Botanical cafe interior with lush plants" />
+          </div>
+        </div>
+
+        <!-- Story & Philosophy Copy -->
+        <div>
+          <div class="eyebrow eyebrow-espresso">
+            <span>Our Philosophy</span>
+          </div>
+          <h2 class="section-title">The alchemy of patience, grain, and terroir.</h2>
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+            Atelier Botanica was born from an unhurried reverence for the ritual. We partner directly with smallholder coffee farmers across Colombia, Ethiopia, and Guatemala—paying an average of 42% above fair-trade baselines for prized varietals.
+          </p>
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
+            Every morning at dawn, our pastry lab rolls out 72-hour sourdough viennoiserie laminated with AOP Charentes-Poitou French butter, filling our sunlit glass conservatory with the intoxicating perfume of caramelized sugar, roasted cardamom, and blooming jasmine.
+          </p>
+
+          <div class="craft-stats-grid">
+            <div>
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Direct Trade</div>
+            </div>
+            <div>
+              <div class="stat-number">48h</div>
+              <div class="stat-label">Fermentation</div>
+            </div>
+            <div>
+              <div class="stat-number">Zero</div>
+              <div class="stat-label">Single-Use Plastics</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE CATEGORIZED MENU
+         ========================================================================== -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="menu-header-center">
+          <div class="eyebrow">
+            <span>Curated Daily Menu</span>
+          </div>
+          <h2 class="section-title">Sensory Roasts & Artisan Bakes</h2>
+          <p class="section-subtitle">
+            Every item is crafted to order with single-origin beans, heirloom botanical extracts, and time-honored French baking techniques.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="menu-controls-container">
+          <!-- Category Tabs -->
+          <div class="category-tabs-wrap" role="tablist" aria-label="Menu Categories">
+            <button type="button" class="category-tab-btn active" data-category="all" role="tab" aria-selected="true">
+              <span>All Offerings</span>
+              <span class="tab-count">16</span>
+            </button>
+            <button type="button" class="category-tab-btn" data-category="coffee" role="tab" aria-selected="false">
+              <span>Coffee & Tonics</span>
+              <span class="tab-count">6</span>
+            </button>
+            <button type="button" class="category-tab-btn" data-category="pastries" role="tab" aria-selected="false">
+              <span>Artisanal Pastries</span>
+              <span class="tab-count">5</span>
+            </button>
+            <button type="button" class="category-tab-btn" data-category="food" role="tab" aria-selected="false">
+              <span>Kitchen & All-Day Fare</span>
+              <span class="tab-count">5</span>
+            </button>
+          </div>
+
+          <!-- Subfilters: Search & Dietary Chips -->
+          <div class="menu-subfilters-row">
+            <!-- Search bar -->
+            <div class="search-input-wrap">
+              <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search beans, notes, pastries..." aria-label="Search menu items" />
+            </div>
+
+            <!-- Dietary Filters -->
+            <div class="dietary-tags-filter" role="group" aria-label="Dietary preferences">
+              <span style="font-size: 0.8125rem; font-weight: 600; color: var(--espresso-800); margin-right: 0.25rem;">Filter by:</span>
+              <button type="button" class="dietary-chip" data-dietary="vegan">🌱 Vegan</button>
+              <button type="button" class="dietary-chip" data-dietary="gluten-free">🌾 Gluten-Free</button>
+              <button type="button" class="dietary-chip" data-dietary="signature">⭐ Signature</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Menu Grid Container -->
+        <div class="menu-grid" id="menuGridContainer" aria-live="polite">
+          <!-- Populated by menu-data.js and main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Floating Tasting Flight Dock -->
+    <div class="flight-dock" id="flightDock" role="region" aria-label="Tasting Flight Bar">
+      <div class="dock-info">
+        <div class="dock-badge-count" id="dockItemCount">0</div>
+        <div>
+          <div class="dock-text-main">Your Tasting Selection</div>
+          <div class="dock-text-sub"><span id="dockTotalAmount">$0.00</span> estimated</div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-sage btn-sm" id="dockReserveBtn">
+        <span>Reserve Table with Flight</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
+    <!-- ==========================================================================
+         BUSINESS HOURS & ROASTING RITUALS
+         ========================================================================== -->
+    <section class="hours-section" id="hours">
+      <div class="container hours-container-grid">
+        <!-- Live Status Card -->
+        <div class="hours-live-card">
+          <div class="live-banner">
+            <div>
+              <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.25rem;">Current Local Time</div>
+              <div class="live-clock-display" id="liveCurrentTime">--:-- --</div>
+            </div>
+            <div class="current-status-large open" id="hoursStatusLarge">
+              <span class="status-dot open"></span>
+              <span>Open Today</span>
+            </div>
+          </div>
+
+          <h3 style="font-family: var(--font-serif); font-size: 1.45rem; color: var(--espresso-950); margin-bottom: 1.25rem;">
+            Weekly Roastery Hours
+          </h3>
+
+          <div class="hours-daily-table" id="hoursTableBody">
+            <!-- Rendered dynamically with current day highlight -->
+          </div>
+
+          <div style="margin-top: 1.5rem; padding: 1rem; border-radius: var(--radius-sm); background: var(--cream-150); font-size: 0.8125rem; color: var(--espresso-800);">
+            <strong>Kitchen Cutoff Note:</strong> Hot kitchen closes 1 hour before cafe doors. Manual pour-overs, chilled cold drips, and pastries served until close.
+          </div>
+        </div>
+
+        <!-- Roasting Rituals & Special Events -->
+        <div>
+          <div class="eyebrow">
+            <span>Daily Schedule</span>
+          </div>
+          <h2 class="section-title">Micro-Roasting & Baking Rituals</h2>
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 1.75rem;">
+            We operate on nature's clock. Join us at specific hours of the day to experience fresh morning bakes or our barista cupping flights.
+          </p>
+
+          <div class="hours-rituals-list">
+            <div class="ritual-item">
+              <div class="ritual-time-badge">7:30 AM</div>
+              <div>
+                <h4 class="ritual-title">First-Pour Single Origin Cupping</h4>
+                <p class="ritual-desc">Our lead roaster dials in the daily micro-lots. First 10 guests receive complimentary tasting cups alongside cupping score cards.</p>
+              </div>
+            </div>
+
+            <div class="ritual-item">
+              <div class="ritual-time-badge">8:00 AM & 12:30 PM</div>
+              <div>
+                <h4 class="ritual-title">Oven Dispatch: Warm Viennoiserie</h4>
+                <p class="ritual-desc">Double-batch kouign-amanns, cardamom swirls, and almond croissants pulled piping-hot from our stone deck ovens.</p>
+              </div>
+            </div>
+
+            <div class="ritual-item">
+              <div class="ritual-time-badge">2:00 PM – 5:00 PM</div>
+              <div>
+                <h4 class="ritual-title">Golden Hour High Tea & Tonics</h4>
+                <p class="ritual-desc">Botanical espresso tonics, ceremonial Kyoto matcha lattes, and savory gratinée pairings in the sun-drenched courtyard.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LOCATION & INTERACTIVE MAP SECTION
+         ========================================================================== -->
+    <section class="location-section" id="location">
+      <div class="container location-grid">
+        <!-- Location Information Panel -->
+        <div class="location-info-panel">
+          <div>
+            <div class="eyebrow eyebrow-espresso">
+              <span>Find Our Sanctuary</span>
+            </div>
+            <h2 class="section-title">In the heart of Greenpoint, Brooklyn.</h2>
+            <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.65;">
+              Housed within a restored 1912 industrial rope factory, wrapped in climbing ivy and flooded with southern natural daylight.
+            </p>
+          </div>
+
+          <!-- Details Cards -->
+          <div class="location-detail-card">
+            <div class="detail-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div style="flex-grow: 1;">
+              <div class="detail-text-title">Address & Entry</div>
+              <div class="detail-text-content">148 Franklin Street, Greenpoint, Brooklyn, NY 11222 (Corner of Franklin & Milton)</div>
+              <button type="button" class="btn btn-outline btn-sm" id="copyAddressBtn" style="margin-top: 0.6rem; padding: 0.35rem 0.85rem; font-size: 0.75rem;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy Address</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="location-detail-card">
+            <div class="detail-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 17h10"/><path d="M7 12h10"/><path d="M7 7h10"/></svg>
+            </div>
+            <div>
+              <div class="detail-text-title">Transit & Ferry</div>
+              <div class="detail-text-content">
+                <strong>G Train:</strong> Greenpoint Ave Station (3 min walk)<br>
+                <strong>NYC Ferry:</strong> India Street Pier (6 min scenic stroll along the waterfront)
+              </div>
+            </div>
+          </div>
+
+          <div class="location-detail-card">
+            <div class="detail-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="detail-text-title">Inquiries & Private Events</div>
+              <div class="detail-text-content">
+                <strong>Phone:</strong> (718) 555-0192<br>
+                <strong>Email:</strong> bonjour@atelierbotanica.com
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Interactive Map Component -->
+        <div class="map-canvas-container" id="interactiveMapContainer">
+          <!-- Stylized Brooklyn Greenpoint SVG Cartography -->
+          <svg class="map-svg-surface" id="interactiveMapSvg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="waterGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#b8d4c5"/>
+                <stop offset="100%" stop-color="#9ebdbe"/>
+              </linearGradient>
+              <filter id="mapShadow" x="-10%" y="-10%" width="120%" height="120%">
+                <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1f140e" flood-opacity="0.25"/>
+              </filter>
+            </defs>
+
+            <!-- Land Base -->
+            <rect width="800" height="500" fill="#f4eee2"/>
+
+            <!-- East River Contour -->
+            <path d="M 0 0 L 220 0 C 200 120, 160 220, 240 340 C 280 400, 250 460, 220 500 L 0 500 Z" fill="url(#waterGrad)"/>
+            <text x="70" y="240" fill="#587a6b" font-family="'Cormorant Garamond', Georgia, serif" font-size="18" font-style="italic" letter-spacing="3" transform="rotate(-65 70 240)">EAST RIVER WATERFRONT</text>
+
+            <!-- Transmitter Park / Greenery Area -->
+            <path d="M 180 200 C 210 180, 260 190, 270 240 C 250 270, 210 260, 185 240 Z" fill="#d3e3d6"/>
+            <text x="210" y="235" fill="#4d6c57" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600">Transmitter Park</text>
+
+            <!-- Major Street Grids -->
+            <!-- Franklin Street (Main north-south artery) -->
+            <line x1="390" y1="0" x2="390" y2="500" stroke="#ffffff" stroke-width="18"/>
+            <line x1="390" y1="0" x2="390" y2="500" stroke="#ded3c1" stroke-width="2" stroke-dasharray="8 6"/>
+            <text x="398" y="460" fill="#785340" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="700" letter-spacing="1">FRANKLIN STREET</text>
+
+            <!-- Manhattan Avenue -->
+            <line x1="570" y1="0" x2="570" y2="500" stroke="#ffffff" stroke-width="14"/>
+            <text x="578" y="460" fill="#8d7465" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600">MANHATTAN AVE</text>
+
+            <!-- West Street -->
+            <line x1="260" y1="0" x2="260" y2="500" stroke="#ffffff" stroke-width="12"/>
+            <text x="268" y="100" fill="#8d7465" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600">WEST ST</text>
+
+            <!-- Cross Streets: Greenpoint Ave, Milton St, Noble St, Calyer St -->
+            <line x1="160" y1="120" x2="800" y2="120" stroke="#ffffff" stroke-width="12"/>
+            <text x="640" y="113" fill="#8d7465" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">GREENPOINT AVE</text>
+
+            <line x1="160" y1="210" x2="800" y2="210" stroke="#ffffff" stroke-width="14"/>
+            <text x="640" y="203" fill="#8d7465" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">MILTON STREET</text>
+
+            <line x1="160" y1="300" x2="800" y2="300" stroke="#ffffff" stroke-width="12"/>
+            <text x="640" y="293" fill="#8d7465" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">NOBLE STREET</text>
+
+            <line x1="160" y1="390" x2="800" y2="390" stroke="#ffffff" stroke-width="12"/>
+            <text x="640" y="383" fill="#8d7465" font-family="'Plus Jakarta Sans', sans-serif" font-size="9">CALYER STREET</text>
+
+            <!-- G Subway Marker at Greenpoint Ave -->
+            <g transform="translate(570, 120)">
+              <circle cx="0" cy="0" r="14" fill="#00933c"/>
+              <text x="0" y="5" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" text-anchor="middle">G</text>
+              <text x="20" y="4" fill="#1f140e" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600">Greenpoint Ave Subway</text>
+            </g>
+
+            <!-- Ferry Pier Marker -->
+            <g transform="translate(195, 80)">
+              <rect x="-10" y="-10" width="20" height="20" rx="4" fill="#2d527c"/>
+              <path d="M-5 -2 L0 -7 L5 -2 L3 -2 L3 4 L-3 4 L-3 -2 Z" fill="#ffffff"/>
+              <text x="16" y="4" fill="#1f140e" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600">India St Ferry</text>
+            </g>
+
+            <!-- CAFE PIN LOCATION: Corner of Franklin & Milton -->
+            <g transform="translate(390, 210)" class="map-pulse-pin" filter="url(#mapShadow)">
+              <!-- Pulsing Ripple Circles -->
+              <circle cx="0" cy="0" r="32" fill="#62886f" opacity="0.3" class="pin-ripple"/>
+              <circle cx="0" cy="0" r="20" fill="#62886f" opacity="0.4"/>
+              
+              <!-- Pin Shape -->
+              <path d="M 0 0 C -14 -14, -14 -32, 0 -36 C 14 -32, 14 -14, 0 0 Z" fill="#1f140e"/>
+              <circle cx="0" cy="-24" r="7" fill="#dfa458"/>
+              <circle cx="0" cy="-24" r="3" fill="#1f140e"/>
+
+              <!-- Callout Card -->
+              <g transform="translate(16, -55)">
+                <rect width="165" height="42" rx="8" fill="#1f140e" opacity="0.95"/>
+                <text x="12" y="17" fill="#f8f4ec" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" font-weight="700">ATELIER BOTANICA</text>
+                <text x="12" y="32" fill="#a7c2b0" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="500">148 Franklin St • Open Today</text>
+              </g>
+            </g>
+          </svg>
+
+          <!-- Interactive UI Overlays -->
+          <div class="map-ui-overlay">
+            <div class="map-overlay-top">
+              <div class="map-badge-tag">
+                <span class="status-dot open"></span>
+                <span>Greenpoint Historic District</span>
+              </div>
+
+              <!-- Zoom / Reset Controls -->
+              <div class="map-controls-group">
+                <button type="button" class="map-btn-icon" id="mapZoomIn" aria-label="Zoom in" title="Zoom In">+</button>
+                <button type="button" class="map-btn-icon" id="mapZoomOut" aria-label="Zoom out" title="Zoom Out">−</button>
+                <button type="button" class="map-btn-icon" id="mapReset" aria-label="Reset view" title="Reset View">↺</button>
+              </div>
+            </div>
+
+            <div class="map-overlay-bottom">
+              <div>
+                <div class="map-bottom-title">Atelier Botanica & Pâtisserie</div>
+                <div class="map-bottom-desc">Corner of Franklin & Milton St • Outdoor bike rack available</div>
+              </div>
+              <a href="https://maps.google.com/?q=148+Franklin+St+Brooklyn+NY" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>Directions</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TABLE RESERVATION SYSTEM
+         ========================================================================== -->
+    <section class="reservation-section" id="reservations">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="menu-header-center" style="margin-bottom: 2.5rem;">
+          <div class="eyebrow">
+            <span>Reserve Your Sanctuary</span>
+          </div>
+          <h2 class="section-title">Table & Tasting Flight Bookings</h2>
+          <p class="section-subtitle">
+            Reserve your preferred garden space in our Botanical Atrium or take a front-row seat at the Barista Tasting Bar for single-origin flights.
+          </p>
+        </div>
+
+        <!-- Reservation Container Box -->
+        <div class="reservation-box-wrapper">
+          <div class="reservation-grid">
+            <!-- Form Side -->
+            <div class="reservation-form-side">
+              <form id="tableReservationForm" novalidate>
+                <!-- Step 1: Guest Count -->
+                <div class="form-step-group">
+                  <label class="step-label">1. Party Size</label>
+                  <div class="counter-box">
+                    <button type="button" class="counter-btn" id="guestMinusBtn" aria-label="Decrease guests">−</button>
+                    <span class="counter-value-text" id="guestsCountValue">2 Guests</span>
+                    <button type="button" class="counter-btn" id="guestPlusBtn" aria-label="Increase guests">+</button>
+                  </div>
+                  <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 1rem;">For parties over 8, please email our events team.</span>
+                </div>
+
+                <!-- Step 2: Date Selector -->
+                <div class="form-step-group">
+                  <label class="step-label">2. Select Date</label>
+                  <div class="date-selector-row" id="dateChipsContainer">
+                    <button type="button" class="date-chip-btn active" data-offset="0">Today</button>
+                    <button type="button" class="date-chip-btn" data-offset="1">Tomorrow</button>
+                    <button type="button" class="date-chip-btn" data-offset="2">In 2 Days</button>
+                  </div>
+                  <input type="date" id="customDateInput" class="custom-date-input" aria-label="Pick a reservation date" />
+                </div>
+
+                <!-- Step 3: Time Slot Chips -->
+                <div class="form-step-group">
+                  <label class="step-label">3. Desired Time</label>
+                  <div class="time-slots-container" id="timeSlotsContainer">
+                    <!-- Populated dynamically by reservation.js -->
+                  </div>
+                </div>
+
+                <!-- Step 4: Seating Zone -->
+                <div class="form-step-group">
+                  <label class="step-label">4. Seating Experience</label>
+                  <div class="seating-zones-grid" id="seatingZonesContainer">
+                    <!-- Populated dynamically by reservation.js with greenhouse, pour-over bar, courtyard -->
+                  </div>
+                </div>
+
+                <!-- Step 5: Contact & Occasion Details -->
+                <div class="form-step-group" style="margin-bottom: 1.5rem;">
+                  <label class="step-label">5. Guest Information</label>
+                  
+                  <div class="form-input-row">
+                    <div class="form-field">
+                      <label for="resNameInput" class="field-label">Full Name *</label>
+                      <input type="text" id="resNameInput" class="form-input" placeholder="e.g. Elena Rostova" required />
+                    </div>
+
+                    <div class="form-field">
+                      <label for="resEmailInput" class="field-label">Email Address *</label>
+                      <input type="email" id="resEmailInput" class="form-input" placeholder="elena@domain.com" required />
+                    </div>
+                  </div>
+
+                  <div class="form-input-row">
+                    <div class="form-field">
+                      <label for="resPhoneInput" class="field-label">Phone Number *</label>
+                      <input type="tel" id="resPhoneInput" class="form-input" placeholder="(718) 555-0149" required />
+                    </div>
+
+                    <div class="form-field">
+                      <label for="resOccasionInput" class="field-label">Occasion / Ritual</label>
+                      <select id="resOccasionInput" class="form-input">
+                        <option value="Morning Coffee & Brunch">Morning Coffee & Brunch</option>
+                        <option value="Specialty Pour-Over Tasting">Specialty Pour-Over Tasting</option>
+                        <option value="Birthday / Celebration">Birthday / Celebration</option>
+                        <option value="Quiet Reading & Creative Work">Quiet Reading & Creative Work</option>
+                        <option value="Casual Business Meeting">Casual Business Meeting</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-field">
+                    <label for="resNotesInput" class="field-label">Dietary Preferences or Special Requests (Optional)</label>
+                    <textarea id="resNotesInput" class="form-input" rows="2" placeholder="e.g. Oat milk preferred, celebrating an anniversary, window seating..."></textarea>
+                  </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.95rem; font-size: 1.05rem;">
+                  <span>Confirm Table Reservation</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </form>
+            </div>
+
+            <!-- Summary Side -->
+            <div class="reservation-summary-side">
+              <h3 class="summary-header">Reservation Summary</h3>
+
+              <div class="summary-details-list">
+                <div class="summary-item">
+                  <div class="summary-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  </div>
+                  <div>
+                    <div class="summary-label">Party Size</div>
+                    <div class="summary-value" id="summaryGuests">2 Guests</div>
+                  </div>
+                </div>
+
+                <div class="summary-item">
+                  <div class="summary-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  </div>
+                  <div>
+                    <div class="summary-label">Date</div>
+                    <div class="summary-value" id="summaryDate">Today</div>
+                  </div>
+                </div>
+
+                <div class="summary-item">
+                  <div class="summary-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div>
+                    <div class="summary-label">Time Slot</div>
+                    <div class="summary-value" id="summaryTime">09:30 AM</div>
+                  </div>
+                </div>
+
+                <div class="summary-item">
+                  <div class="summary-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 20h10"/><path d="M10 20c0-4.4 3.6-8 8-8v-1a7 7 0 0 0-7-7 7 7 0 0 0-7 7v1c4.4 0 8 3.6 8 8Z"/></svg>
+                  </div>
+                  <div>
+                    <div class="summary-label">Seating Zone</div>
+                    <div class="summary-value" id="summarySeating">The Botanical Atrium</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tasting Flight Wishlist Box (if user selected menu items) -->
+              <div class="summary-wishlist-box" id="summaryWishlistWrap" style="display: none;">
+                <div class="wishlist-title">
+                  <span>Selected Tasting Flight</span>
+                  <span style="color: var(--sage-700);">Pre-ordered</span>
+                </div>
+                <div class="wishlist-items-preview" id="summaryWishlistPreview"></div>
+              </div>
+
+              <!-- Policy Note -->
+              <div class="policy-note">
+                <p><strong>Reservation Policy:</strong> We hold tables for 15 minutes past your reserved time. Walk-in seating is always reserved at our barista counter. No deposit required.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PRESS ACCOLADES & GUEST TESTIMONIALS
+         ========================================================================== -->
+    <section class="press-section">
+      <div class="container">
+        <div class="menu-header-center">
+          <div class="eyebrow eyebrow-espresso">
+            <span>Critical Acclaim</span>
+          </div>
+          <h2 class="section-title">Words from Coffee Critics & Food Observers</h2>
+        </div>
+
+        <div class="quotes-carousel">
+          <div class="quote-card">
+            <p class="quote-text">
+              “Atelier Botanica treats single-origin pour overs with the same reverence Burgundy winemakers treat Grand Cru. The Ethiopia Guji pour-over is unforgettable.”
+            </p>
+            <div class="quote-author-wrap">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Sarah Lin" class="author-avatar" />
+              <div>
+                <div class="author-name">Sarah Lin</div>
+                <div class="author-pub">Senior Editor, Sprudge Magazine</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <p class="quote-text">
+              “Their Pistachio Rose Kouign-Amann breaks into a thousand buttery shards. A rare botanical sanctuary where you can sip Geisha coffee under hanging vines.”
+            </p>
+            <div class="quote-author-wrap">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Marcus Vance" class="author-avatar" />
+              <div>
+                <div class="author-name">Marcus Vance</div>
+                <div class="author-pub">Restaurant Critic, Eater NY</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <p class="quote-text">
+              “The warm espresso, soft sage tones, and lush conservatory lighting make this easily the most aesthetic and tranquil morning cafe in Brooklyn.”
+            </p>
+            <div class="quote-author-wrap">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80" alt="Chloé Delacroix" class="author-avatar" />
+              <div>
+                <div class="author-name">Chloé Delacroix</div>
+                <div class="author-pub">Culture & Living, Architectural Digest</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL 1: TASTING NOTES & ORIGIN DETAIL
+       ========================================================================== -->
+  <div class="modal-overlay" id="tastingNotesModal" role="dialog" aria-modal="true" aria-label="Tasting Notes Details">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="closeTastingModal" aria-label="Close modal">&times;</button>
+      <div style="height: 240px; overflow: hidden; background: var(--cream-200);">
+        <img id="modalDetailImg" src="" alt="Menu item image" style="width: 100%; height: 100%; object-fit: cover;" />
+      </div>
+      <div style="padding: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+          <div>
+            <span id="modalDetailCategory" class="eyebrow" style="margin-bottom: 0.5rem;">Origin Roast</span>
+            <h3 id="modalDetailTitle" style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--espresso-950); line-height: 1.2;"></h3>
+          </div>
+          <span id="modalDetailPrice" style="font-family: var(--font-serif); font-size: 1.75rem; font-weight: 700; color: var(--sage-700);"></span>
+        </div>
+
+        <p id="modalDetailDesc" style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem;"></p>
+
+        <div style="margin-bottom: 1.5rem;">
+          <div style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--espresso-900); margin-bottom: 0.6rem;">Sensory Tasting Notes</div>
+          <div id="modalDetailNotes" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
+        </div>
+
+        <div style="background: var(--cream-100); border-radius: var(--radius-md); padding: 1.25rem; font-size: 0.875rem; display: flex; flex-direction: column; gap: 0.6rem; border: 1px solid var(--border-light);">
+          <div><strong>Origin / Terroir:</strong> <span id="modalDetailOrigin"></span></div>
+          <div><strong>Roast / Technique:</strong> <span id="modalDetailRoast"></span></div>
+          <div><strong>Processing Method:</strong> <span id="modalDetailProcess"></span></div>
+          <div><strong>Preparation:</strong> <span id="modalDetailBrew"></span></div>
+          <div><strong>Recommended Pairing:</strong> <span id="modalDetailPairing" style="color: var(--sage-700); font-weight: 600;"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: RESERVATION CONFIRMATION RECEIPT
+       ========================================================================== -->
+  <div class="modal-overlay" id="reservationConfirmModal" role="dialog" aria-modal="true" aria-label="Reservation Confirmation">
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="closeConfirmModal" aria-label="Close modal">&times;</button>
+      <div class="confirm-content">
+        <div class="confirm-icon-seal">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--espresso-950); margin-bottom: 0.5rem;">Table Reserved!</h3>
+        <p style="font-size: 0.9375rem; color: var(--text-secondary);">We look forward to hosting you at Atelier Botanica.</p>
+        
+        <div class="confirm-code" id="confirmBookingCode">BOT-0000</div>
+
+        <div class="receipt-card">
+          <div class="receipt-row">
+            <span style="color: var(--text-muted);">Guest Name</span>
+            <strong id="confirmGuestName">--</strong>
+          </div>
+          <div class="receipt-row">
+            <span style="color: var(--text-muted);">Date</span>
+            <strong id="confirmDate">--</strong>
+          </div>
+          <div class="receipt-row">
+            <span style="color: var(--text-muted);">Time</span>
+            <strong id="confirmTime">--</strong>
+          </div>
+          <div class="receipt-row">
+            <span style="color: var(--text-muted);">Party Size</span>
+            <strong id="confirmGuests">--</strong>
+          </div>
+          <div class="receipt-row">
+            <span style="color: var(--text-muted);">Seating Zone</span>
+            <strong id="confirmSeating">--</strong>
+          </div>
+          <div class="receipt-row">
+            <span style="color: var(--text-muted);">Confirmation Sent To</span>
+            <strong id="confirmEmail">--</strong>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <button type="button" class="btn btn-outline" id="addToCalendarBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Add to Google Calendar</span>
+          </button>
+          <button type="button" class="btn btn-primary" id="confirmDoneBtn">
+            <span>Done</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Toast Placeholder -->
+  <div id="globalToast" class="toast-notice" role="status" aria-live="polite"></div>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Ethos -->
+        <div>
+          <div class="brand-logo" style="margin-bottom: 0.5rem;">
+            <div class="brand-symbol" style="background: var(--sage-700);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a9 9 0 0 1 9 9c0 4.97-4.03 9-9 9A9 9 0 0 1 3 11a9 9 0 0 1 9-9Z"/></svg>
+            </div>
+            <div class="brand-text-wrap">
+              <span class="brand-name" style="color: #ffffff;">Atelier Botanica</span>
+              <span class="brand-tagline" style="color: var(--sage-300);">Specialty Micro-Roastery</span>
+            </div>
+          </div>
+          <p class="footer-brand-bio">
+            A celebration of ethical agriculture, slow fermentations, and botanical architecture. Nestled on Franklin Street, Greenpoint.
+          </p>
+          <div style="margin-top: 1.25rem; display: flex; gap: 0.85rem;">
+            <a href="#" aria-label="Instagram" style="color: var(--cream-300);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="Spotify Cafe Playlist" style="color: var(--cream-300);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 11.5c3-1 6-1 8 0"/><path d="M7 14.5c4-1.2 7-1.2 10 0"/><path d="M9 8.5c2.5-.8 5.5-.8 7 0"/></svg></a>
+            <a href="#" aria-label="Substack" style="color: var(--cream-300);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="4"/><rect x="4" y="10" width="16" height="4"/><polygon points="4,16 12,21 20,16 20,20 12,24 4,20"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Home Sanctuary</a></li>
+            <li><a href="#craft" class="footer-link">Our Craft & Terroir</a></li>
+            <li><a href="#menu" class="footer-link">Seasonal Coffee & Food</a></li>
+            <li><a href="#hours" class="footer-link">Hours & Rituals</a></li>
+            <li><a href="#location" class="footer-link">Location & Map</a></li>
+            <li><a href="#reservations" class="footer-link">Table Reservations</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Hours & Sanctuary Policy -->
+        <div>
+          <h4 class="footer-col-title">Hours & Visits</h4>
+          <ul class="footer-links-list">
+            <li style="color: var(--cream-300);"><strong>Mon – Fri:</strong> 7:00 AM – 6:00 PM</li>
+            <li style="color: var(--cream-300);"><strong>Sat – Sun:</strong> 7:30 AM – 7:00 PM</li>
+            <li style="margin-top: 0.5rem; color: var(--cream-400); font-size: 0.8125rem;">
+              <em>Laptop policy:</em> Welcomed in the Greenhouse weekdays 8am–2pm. Unplugged weekends.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Dispatch Newsletter -->
+        <div>
+          <h4 class="footer-col-title">The Roaster's Dispatch</h4>
+          <p style="font-size: 0.8125rem; color: var(--cream-300); margin-bottom: 1rem; line-height: 1.5;">
+            Receive secret drop announcements for rare Gesha micro-lots, weekend pastry specials, and seasonal cupping workshops.
+          </p>
+          <form id="footerNewsletterForm" class="newsletter-form">
+            <div class="newsletter-input-group">
+              <input type="email" class="newsletter-input" placeholder="Your email address" required aria-label="Email for newsletter" />
+              <button type="submit" class="newsletter-btn" aria-label="Subscribe">Join</button>
+            </div>
+            <span style="font-size: 0.6875rem; color: var(--cream-400);">No spam ever. Unsubscribe anytime.</span>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          © 2026 Atelier Botanica LLC. All Rights Reserved. Artisanal Coffee & Pâtisserie.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-link">Accessibility</a>
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Farm Traceability</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/menu-data.js"></script>
+  <script src="assets/js/reservation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
